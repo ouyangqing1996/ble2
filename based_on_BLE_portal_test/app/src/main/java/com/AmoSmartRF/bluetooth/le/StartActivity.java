@@ -134,7 +134,6 @@ public class StartActivity extends AppCompatActivity {
     private static String adc4_volt_str;
     private static boolean sava_data_checked = false;
     private static double adc4_volt;
-    private SimpleDateFormat formater = new SimpleDateFormat("ss");
 
 
     @Override
