@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue May 28 16:50:40 CST 2019
+0.baseType=DIRECTORY
+0.base=D\:\\ideaProjects\\ble4\\based_on_BLE_portal_test\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+0.path=classes.dex
+0.set=DEX
+count=1

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rssi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RSSI: -25; 距离： 1 米"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/start_txt_ADC0ADC1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rssi_tv"
+        android:text="传感器当前电压值：0.0001 V "
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/text_of_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/start_txt_ADC0ADC1"
+        android:paddingTop="5dp"
+        android:text="保存数据开关 "
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/switch_save_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_txt_ADC0ADC1"
+        android:layout_toRightOf="@id/text_of_switch"
+        android:gravity="center"
+        android:paddingTop="9dp"
+        android:textOff="保存数据_关"
+        android:textOn="保存数据_开" />
+
+
+    -
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_save_data"
+        android:orientation="vertical">
+
+
+        -
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--<EditTextandroid:id="@+id/start_txt_SetPWM"android:layout_width="wrap_content"android:layout_height="wrap_content"android:maxLength="8"android:text="50607080"android:textSize="16sp" />-->
+
+
+            <!--<SeekBarandroid:id="@+id/seekBar_pwmvalue"android:layout_width="fill_parent"android:layout_height="wrap_content"android:max="255"android:progress="125"android:secondaryProgress="255" />-->
+
+
+        </LinearLayout>
+
+
+        -
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- <Buttonandroid:id="@+id/start_button_SetPwm"android:layout_width="fill_parent"android:layout_height="wrap_content"android:layout_weight="1"android:text="写4通道PWM(无睡眠 约8mA电流)"android:textSize="10sp" /><Buttonandroid:id="@+id/stop_button_SetPwm"android:layout_width="fill_parent"android:layout_height="wrap_content"android:layout_weight="1"android:text="关闭PWM(有睡眠约200uA电流)"android:textSize="10sp" />-->
+
+
+        </LinearLayout>
+
+
+        -
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- <Switchandroid:id="@+id/led1_switch"android:layout_width="wrap_content"android:layout_height="wrap_content"android:layout_marginBottom="8dp"android:textOff="Led1关"android:textOn="Led1开" />-->
+
+
+        </LinearLayout>
+
+
+        -
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="bt_look"
+                android:text="查看\n数据" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="bt_tranct_data"
+                android:text="清空\n数据" />
+
+            <!--<Buttonandroid:layout_width="wrap_content"android:layout_height="wrap_content"android:layout_weight="1"android:onClick="showMyView"android:text="查看实时图" />-->
+
+
+            <Button
+                android:id="@+id/set_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="bt_setspeed"
+                android:text="设置读\n取速度" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="exportData"
+                android:text="导出数据\n到sd卡" />
+
+        </LinearLayout>
+
+        <!--<LinearLayoutandroid:layout_width="match_parent"android:layout_height="match_parent"><com.ble.mainm.ble.main.MyViewandroid:id="@+id/myview"android:layout_width="match_parent"android:layout_height="1800dp" /></LinearLayout>-->
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/sch_img"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/school_chemstry" />
+
+    <TextView
+        android:id="@+id/zky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sch_img"
+        android:background="#000000"
+        android:gravity="center"
+        android:text="长沙理工大学与中国科学院亚热带生态农业研究所开发"
+        android:textColor="#00ff00"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
